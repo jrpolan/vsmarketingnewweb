@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>VS Marketing | Growth Built on Fundamentals, Not Fads</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="VS Marketing helps small and local businesses grow through fundamentals-first inbound marketing, business strategy, and tech enablement." />
+  <style>
+    :root {
+      --vs-accent: #f62a3c;
+      --vs-accent-soft: #ffe2e5;
+      --vs-bg: #ffffff;
+      --vs-text-main: #111111;
+      --vs-text-muted: #5b5b5b;
+      --vs-border-subtle: #e5e5e5;
+      --vs-shadow-soft: 0 18px 45px rgba(0,0,0,0.06);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--vs-text-main);
+      background: var(--vs-bg);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--vs-accent);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .container {
+      width: 92%;
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    /* Header / Nav */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      padding: 0.65rem 0;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .nav-logo {
+      height: 40px;
+      width: auto;
+      display: block;
+    }
+
+    .nav-tagline {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #555;
+      max-width: 210px;
+      line-height: 1.3;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      font-size: 0.9rem;
+    }
+
+    .nav-links a {
+      color: #444;
+    }
+    .nav-links a:hover {
+      color: #000;
+    }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.6rem 1.1rem;
+      border-radius: 999px;
+      border: 1px solid var(--vs-accent);
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #000;
+      background: #fff;
+    }
+    .nav-cta:hover {
+      background: var(--vs-accent-soft);
+      text-decoration: none;
+    }
+
+    /* Mobile Nav */
+
+    .nav-toggle {
+      display: none;
+      border: none;
+      background: none;
+      font-size: 1.5rem;
+      line-height: 1;
+      cursor: pointer;
+    }
+
+    @media (max-width: 840px) {
+      .nav-links,
+      .nav-cta {
+        display: none;
+      }
+      .nav-toggle {
+        display: block;
+      }
+      .nav.open .nav-links,
+      .nav.open .nav-cta {
+        display: flex;
+      }
+      .nav.open {
+        flex-wrap: wrap;
+        align-items: flex-start;
+      }
+      .nav.open .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        padding: 0.75rem 0 0.25rem;
+        border-top: 1px solid #eee;
+      }
+      .nav.open .nav-cta {
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    /* Sections */
+
+    main {
+      flex: 1;
+    }
+
+    section {
+      padding: 3.5rem 0;
+      scroll-margin-top: 80px;
+    }
+
+    .section-header {
+      max-width: 640px;
+      margin-bottom: 2rem;
+    }
+
+    .section-title {
+      font-size: 1.9rem;
+      margin: 0 0 0.6rem;
+      color: #000;
+    }
+
+    .section-kicker {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #888;
+      margin-bottom: 0.4rem;
+    }
+
+    .section-intro {
+      margin: 0;
+      font-size: 1rem;
+      color: var(--vs-text-muted);
+      line-height: 1.6;
+    }
+
+    .section-alt {
+      background: #fafafa;
+      border-top: 1px solid #f1f1f1;
+      border-bottom: 1px solid #f1f1f1;
+    }
+
+    /* Hero */
+
+    .hero {
+      padding: 3.5rem 0 3rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.3fr);
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .hero-kicker {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--vs-accent);
+      margin-bottom: 0.7rem;
+    }
+
+    .hero-title {
+      font-size: 2.6rem;
+      line-height: 1.08;
+      margin: 0 0 0.8rem;
+      color: #000;
+    }
+
+    .hero-subtitle {
+      font-size: 1.05rem;
+      color: var(--vs-text-muted);
+      margin: 0 0 1.8rem;
+      max-width: 32rem;
+    }
+
+    .hero-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.9rem 1.4rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      cursor: pointer;
+      transition: background 140ms ease, color 140ms ease, box-shadow 140ms ease, transform 120ms ease;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--vs-accent);
+      color: #fff;
+      box-shadow: 0 16px 32px rgba(246, 42, 60, 0.32);
+    }
+    .btn-primary:hover {
+      background: #d51f2f;
+      box-shadow: 0 20px 40px rgba(246, 42, 60, 0.4);
+      transform: translateY(-1px);
+      text-decoration: none;
+    }
+
+    .btn-outline {
+      background: #fff;
+      color: #000;
+      border-color: #000;
+    }
+    .btn-outline:hover {
+      background: #111;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .hero-image {
+      border-radius: 1.4rem;
+      box-shadow: var(--vs-shadow-soft);
+      background: linear-gradient(135deg, #fefefe, #f5f5f5);
+      padding: 0.9rem;
+    }
+
+    .hero-image-inner {
+      border-radius: 1.1rem;
+      background: #fff;
+      padding: 1.4rem 1.6rem;
+      border: 1px solid #f0f0f0;
+    }
+
+    .hero-image-tag {
+      font-size: 0.8rem;
+      color: var(--vs-text-muted);
+      margin-bottom: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
+
+    .hero-metric {
+      display: flex;
+      gap: 1.1rem;
+      margin-bottom: 1.1rem;
+    }
+    .hero-metric-number {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #000;
+    }
+    .hero-metric-label {
+      font-size: 0.9rem;
+      color: var(--vs-text-muted);
+    }
+
+    .hero-mini {
+      font-size: 0.85rem;
+      color: var(--vs-text-muted);
+      margin-top: 0.5rem;
+    }
+
+    /* Problem / Solution */
+
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
+      gap: 2.5rem;
+      align-items: flex-start;
+    }
+
+    .list-title {
+      font-weight: 600;
+      margin-bottom: 0.6rem;
+    }
+
+    .bullet-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .bullet-list li {
+      position: relative;
+      padding-left: 1.3rem;
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+      color: var(--vs-text-muted);
+    }
+
+    .bullet-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--vs-accent);
+      font-size: 1.1rem;
+      line-height: 1;
+    }
+
+    /* Cards / Grids */
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.6rem;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.6rem;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 1rem;
+      padding: 1.5rem 1.6rem;
+      border: 1px solid var(--vs-border-subtle);
+      box-shadow: var(--vs-shadow-soft);
+    }
+
+    .card h3 {
+      margin: 0 0 0.5rem;
+      font-size: 1.1rem;
+      color: #000;
+    }
+
+    .card p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: var(--vs-text-muted);
+      line-height: 1.6;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.14rem 0.7rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      background: var(--vs-accent-soft);
+      color: var(--vs-accent);
+      margin-bottom: 0.4rem;
+    }
+
+    /* Stats */
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.4rem;
+    }
+
+    .stat {
+      border-radius: 1rem;
+      padding: 1.2rem 1.4rem;
+      background: #fff;
+      border: 1px dashed rgba(0,0,0,0.1);
+      box-shadow: var(--vs-shadow-soft);
+      font-size: 0.95rem;
+      color: var(--vs-text-muted);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.2rem;
+      color: #000;
+      margin-bottom: 0.25rem;
+    }
+
+    /* Case Studies */
+
+    .case-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 1.4rem;
+    }
+
+    .case-meta {
+      font-size: 0.85rem;
+      color: var(--vs-text-muted);
+      margin-bottom: 0.6rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .case-list {
+      list-style: disc;
+      margin: 0.6rem 0 0.6rem 1.2rem;
+      padding: 0;
+      color: var(--vs-text-muted);
+      font-size: 0.95rem;
+    }
+
+    .case-quote {
+      font-size: 0.9rem;
+      color: var(--vs-text-muted);
+      margin-top: 0.6rem;
+      border-left: 3px solid var(--vs-accent-soft);
+      padding-left: 0.8rem;
+    }
+
+    /* Pricing */
+
+    .pricing-note {
+      font-size: 0.95rem;
+      color: var(--vs-text-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    /* CTA */
+
+    .cta {
+      text-align: center;
+    }
+
+    .cta p {
+      max-width: 480px;
+      margin: 0.7rem auto 1.7rem;
+      font-size: 0.98rem;
+      color: var(--vs-text-muted);
+      line-height: 1.6;
+    }
+
+    /* Contact / Footer */
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.4rem;
+    }
+
+    .contact-item-title {
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+
+    .footer {
+      border-top: 1px solid #f0f0f0;
+      padding: 1.5rem 0;
+      font-size: 0.85rem;
+      color: #777;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .footer span {
+      color: #000;
+      font-weight: 500;
+    }
+
+    /* Form */
+
+    .lead-form {
+      max-width: 520px;
+      margin: 2rem auto 0;
+      text-align: left;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.9rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .form-field {
+      margin-bottom: 0.9rem;
+    }
+
+    .form-field label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 500;
+      margin-bottom: 0.3rem;
+    }
+
+    .form-field input,
+    .form-field textarea {
+      width: 100%;
+      padding: 0.6rem 0.7rem;
+      border-radius: 0.6rem;
+      border: 1px solid #ddd;
+      font: inherit;
+      color: var(--vs-text-main);
+    }
+
+    .form-footnote {
+      font-size: 0.8rem;
+      color: #888;
+      margin-top: 0.4rem;
+    }
+
+    /* Responsive Layout Tweaks */
+
+    @media (max-width: 960px) {
+      .hero-grid {
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
+      }
+      .grid-3,
+      .stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .contact-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 740px) {
+      section {
+        padding: 2.7rem 0;
+      }
+      .hero {
+        padding-top: 2.5rem;
+      }
+      .hero-grid,
+      .two-col,
+      .grid-3,
+      .grid-2,
+      .stats,
+      .contact-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .hero-title {
+        font-size: 2.1rem;
+      }
+      .hero-subtitle {
+        font-size: 0.98rem;
+      }
+      .nav-tagline {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- Header / Nav -->
+  <header>
+    <div class="container">
+      <div class="nav" id="nav">
+        <div class="nav-left">
+          <img src="VSMARKETING NEW LOGO (1024 x 1024 px).png" alt="VS Marketing logo" class="nav-logo" />
+          <div class="nav-tagline">Growth Built on Fundamentals, Not Fads</div>
+        </div>
+        <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.getElementById('nav').classList.toggle('open')">
+          ☰
+        </button>
+        <div class="nav-links">
+          <a href="#problem">Problems We Solve</a>
+          <a href="#pillars">How We Help</a>
+          <a href="#why">Why Us</a>
+          <a href="#results">Results</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <a href="#contact" class="nav-cta">Schedule Consultation</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <div class="hero-kicker">For Small & Local Businesses</div>
+            <h1 class="hero-title">Growth Built on Fundamentals, Not Fads.</h1>
+            <p class="hero-subtitle">
+              Marketing, strategy, and modern tech systems—built for small and local businesses that want real, sustainable growth without the noise.
+            </p>
+            <div class="hero-cta-row">
+              <a href="#contact" class="btn btn-primary">Schedule a Consultation</a>
+              <a href="#results" class="btn btn-outline">See Client Results</a>
+            </div>
+          </div>
+          <div class="hero-image">
+            <div class="hero-image-inner">
+              <div class="hero-image-tag">What VS Marketing Delivers</div>
+
+              <div class="hero-metric">
+                <div class="hero-metric-number">3</div>
+                <div class="hero-metric-label">Core pillars working together: Inbound Marketing, Strategy, Tech Enablement.</div>
+              </div>
+
+              <div class="hero-metric">
+                <div class="hero-metric-number">200%+</div>
+                <div class="hero-metric-label">Increase in search visibility for local service clients after tightening fundamentals.</div>
+              </div>
+
+              <p class="hero-mini">
+                We bring founder-level strategy, hands-on implementation, and practical systems so you can stop guessing and grow with confidence.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problem / Solution -->
+    <section id="problem" class="section-alt">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Problem &amp; Solution</div>
+          <h2 class="section-title">Small Businesses Don’t Need More Tactics—They Need a System.</h2>
+          <p class="section-intro">
+            Most owners aren’t short on effort. They’re short on clarity, time, and a clear plan tying marketing, operations, and tools together.
+          </p>
+        </div>
+
+        <div class="two-col">
+          <div>
+            <div class="list-title">If any of this sounds familiar, you’re not alone:</div>
+            <ul class="bullet-list">
+              <li>Marketing feels scattered and unpredictable from month to month.</li>
+              <li>Systems are outdated, manual, and create extra work and mistakes.</li>
+              <li>Too much of your time goes to admin instead of growth and strategy.</li>
+              <li>Agencies push shiny campaigns but rarely explain what’s working.</li>
+              <li>You’re paying for tools your team barely uses—or uses incorrectly.</li>
+            </ul>
+          </div>
+          <div>
+            <div class="list-title">VS Marketing gives you a fundamentals-first growth system:</div>
+            <ul class="bullet-list">
+              <li>Clear positioning and messaging so customers know why to choose you.</li>
+              <li>An inbound marketing engine that consistently brings in the right leads.</li>
+              <li>Simple, modern tools for CRM, billing, and scheduling that actually fit your business.</li>
+              <li>Regular guidance from people who have built and sold real companies.</li>
+              <li>A practical roadmap that ties marketing, operations, and tech together.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Three Pillars -->
+    <section id="pillars">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">How We Help</div>
+          <h2 class="section-title">Three Ways We Help You Grow</h2>
+          <p class="section-intro">
+            You don’t have to fix everything at once. Start where the pain is highest—marketing, operations, or systems—and expand from there.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <div class="pill">Pillar 1</div>
+            <h3>Inbound Marketing</h3>
+            <p>
+              Websites, SEO, content, ads, email, and CRM—planned and executed as a single system to attract and convert the right customers instead of chasing random campaigns.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="pill">Pillar 2</div>
+            <h3>Business Strategy &amp; Operations</h3>
+            <p>
+              Founder-level strategic guidance to clarify goals, simplify operations, and improve profitability. We translate your vision into a realistic, step-by-step plan.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="pill">Pillar 3</div>
+            <h3>Tech Enablement &amp; Modernization</h3>
+            <p>
+              Modern tools for invoicing, CRM, scheduling, payments, and automation—implemented and integrated so your business runs smoothly and you get your time back.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why" class="section-alt">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Why VS Marketing</div>
+          <h2 class="section-title">Why Small Businesses Choose VS Marketing</h2>
+          <p class="section-intro">
+            We’re built from the ground up for small and local businesses—not enterprise, not theory, and definitely not marketing fads.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card">
+            <h3>Founder-Led Expertise</h3>
+            <p>Our strategies are shaped by people who have actually built, scaled, and sold companies—not just studied them.</p>
+          </div>
+          <div class="card">
+            <h3>No-Fads, No-Fluff</h3>
+            <p>We focus on fundamentals that work long-term instead of chasing every new tactic or trend that pops up.</p>
+          </div>
+          <div class="card">
+            <h3>Hands-On Implementation</h3>
+            <p>We don’t just hand you a deck. We help implement, integrate, and optimize systems with your team.</p>
+          </div>
+          <div class="card">
+            <h3>Built for Small Business</h3>
+            <p>Our pricing, processes, and recommendations respect small-business realities around time, budget, and staff.</p>
+          </div>
+          <div class="card">
+            <h3>Transparent &amp; Practical</h3>
+            <p>No jargon. No black boxes. Just clear recommendations tied directly to growth, efficiency, or profitability.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results / Stats -->
+    <section id="results">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Results</div>
+          <h2 class="section-title">Real Results, Real Impact</h2>
+          <p class="section-intro">
+            We measure success in terms that matter to you—visibility, leads, systems, and profit. Here’s what fundamentals-first growth looks like in practice.
+          </p>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <strong>200%+ Search Visibility</strong>
+            Local service businesses see major gains after we fix basic SEO structure, content, and local listings.
+          </div>
+          <div class="stat">
+            <strong>60–90 Days to Better Leads</strong>
+            Once fundamentals are in place, most clients see more consistent inbound opportunities within 2–3 months.
+          </div>
+          <div class="stat">
+            <strong>Streamlined Systems</strong>
+            Cleaner billing, scheduling, and CRM setups cut admin time and reduce missed revenue across multiple clients.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Case Studies -->
+    <section class="section-alt">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Client Stories</div>
+          <h2 class="section-title">Examples of Businesses We’ve Helped</h2>
+          <p class="section-intro">
+            Every business is different, but the pattern is the same: clarify, simplify, and connect the pieces so growth stops being random.
+          </p>
+        </div>
+
+        <div class="case-grid">
+          <article class="card">
+            <div class="case-meta">Local Service Business &mdash; Inbound Engine Build</div>
+            <h3>Doubling Qualified Leads in 6 Months</h3>
+            <p>
+              A local service provider relied almost entirely on word-of-mouth and an outdated website. They had no tracking, no follow-up system, and unpredictable inquiries.
+            </p>
+            <ul class="case-list">
+              <li>Redesigned and simplified the website with clear offers and calls to action.</li>
+              <li>Improved local SEO and created content around their core services.</li>
+              <li>Implemented a simple CRM with automated lead capture and follow-up.</li>
+            </ul>
+            <p class="case-quote">
+              “VS Marketing gave us structure and consistency. For the first time, our marketing feels under control.”
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="case-meta">Retail / Brick-and-Mortar &mdash; Systems Modernization</div>
+            <h3>Streamlining Systems and Improving Cash Flow</h3>
+            <p>
+              A busy retail business juggled manual billing, scattered scheduling, and multiple disconnected tools. Payments were slow, and reporting was messy.
+            </p>
+            <ul class="case-list">
+              <li>Implemented an integrated POS and invoicing system with recurring billing where appropriate.</li>
+              <li>Simplified scheduling and standardized how staff used the tools.</li>
+              <li>Created concise SOPs and quick-reference training for the team.</li>
+            </ul>
+            <p class="case-quote">
+              “Our systems finally feel like they’re working for us instead of against us.”
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Summary -->
+    <section id="pricing">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Pricing</div>
+          <h2 class="section-title">Simple, Transparent Options</h2>
+          <p class="section-intro">
+            No hidden fees. No bloated retainers. Just straightforward options designed around small-business realities.
+          </p>
+        </div>
+
+        <p class="pricing-note">
+          Exact pricing depends on your size, systems, and goals. Here’s how we typically structure engagements:
+        </p>
+
+        <div class="grid-3">
+          <div class="card">
+            <div class="pill">Inbound Marketing</div>
+            <h3>Starter Presence</h3>
+            <p>For businesses building a serious online presence for the first time. Website clean-up or simple new site, basic SEO, and tracking.</p>
+          </div>
+          <div class="card">
+            <div class="pill">Inbound Marketing</div>
+            <h3>Growth Inbound</h3>
+            <p>Ongoing SEO, content, email, and reporting for owners ready to generate consistent inbound leads month after month.</p>
+          </div>
+          <div class="card">
+            <div class="pill">Inbound Marketing</div>
+            <h3>Performance Inbound</h3>
+            <p>Full inbound program including SEO, content, ads, advanced email, and deeper strategy involvement from our team.</p>
+          </div>
+        </div>
+
+        <div style="height:1.8rem;"></div>
+
+        <div class="grid-3">
+          <div class="card">
+            <div class="pill">Strategy</div>
+            <h3>Business Diagnostic</h3>
+            <p>One-time deep dive into your marketing, operations, and numbers. You get clear findings and a prioritized action plan.</p>
+          </div>
+          <div class="card">
+            <div class="pill">Strategy</div>
+            <h3>Monthly Advisory</h3>
+            <p>Ongoing strategy calls, planning, and accountability so you’re never guessing what to focus on next.</p>
+          </div>
+          <div class="card">
+            <div class="pill">Strategy + Tech</div>
+            <h3>Growth Partner</h3>
+            <p>A higher-engagement partnership where we stay close to your leadership and help drive major improvements over time.</p>
+          </div>
+        </div>
+
+        <div style="height:1.8rem;"></div>
+
+        <div class="grid-3">
+          <div class="card">
+            <div class="pill">Tech Enablement</div>
+            <h3>Core Stack Setup</h3>
+            <p>Implementation of essential tools for invoicing, scheduling, and payments—plus basic training and documentation.</p>
+          </div>
+          <div class="card">
+            <div class="pill">Tech Enablement</div>
+            <h3>CRM &amp; Automation</h3>
+            <p>CRM selection and implementation, key automation flows, and training focused on lead capture and follow-up.</p>
+          </div>
+          <div class="card">
+            <div class="pill">Tech Enablement</div>
+            <h3>Full Tech Modernization</h3>
+            <p>Broader overhaul of your tools and workflows so the way your business runs is as strong as what you sell.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Big CTA -->
+    <section class="section-alt">
+      <div class="container cta">
+        <div class="section-kicker">Next Step</div>
+        <h2 class="section-title">Ready to Simplify Your Growth?</h2>
+        <p>
+          If you’re tired of scattered tactics and want a practical, fundamentals-first approach that works, let’s talk. We’ll review your business, identify the biggest levers, and map a clear plan forward.
+        </p>
+        <a href="#contact" class="btn btn-primary">Schedule Your Consultation</a>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Contact</div>
+          <h2 class="section-title">Let’s Talk About Your Business</h2>
+          <p class="section-intro">
+            Tell us a bit about where you are today and what you’d like to improve. We’ll follow up with next steps and a recommended starting point.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div>
+            <div class="contact-item-title">Call</div>
+            <p><a href="tel:12057375133">205-737-5133</a></p>
+          </div>
+          <div>
+            <div class="contact-item-title">Email</div>
+            <p><a href="mailto:info@vs.marketing">info@vs.marketing</a></p>
+          </div>
+          <div>
+            <div class="contact-item-title">Service Area</div>
+            <p>Serving small and local businesses wherever fundamentals matter more than fads.</p>
+          </div>
+        </div>
+
+        <form class="lead-form">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="name">Name</label>
+              <input id="name" type="text" name="name" placeholder="Your name" />
+            </div>
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input id="email" type="email" name="email" placeholder="you@example.com" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="business">Business Name</label>
+              <input id="business" type="text" name="business" placeholder="Your business" />
+            </div>
+            <div class="form-field">
+              <label for="website">Website (optional)</label>
+              <input id="website" type="url" name="website" placeholder="https://…" />
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="message">What would you like to improve?</label>
+            <textarea id="message" name="message" rows="4" placeholder="Share a short description of where you are now and where you’d like help."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit Inquiry</button>
+          <div class="form-footnote">We’ll review your message and typically respond within one business day. No spam, ever.</div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div>© <span id="year"></span> VS Marketing. All rights reserved.</div>
+        <div>Growth Built on Fundamentals, Not Fads.</div>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+  // dynamic year
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
