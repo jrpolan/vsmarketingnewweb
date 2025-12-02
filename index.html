@@ -2,182 +2,1282 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="AI-enabled inbound marketing and business growth for small businesses by VS Marketing." />
-  <title>VS Marketing | AI-Enabled Growth</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- SEO Title -->
+  <title>VS Marketing | AI-Enabled Inbound Marketing & Small Business Growth Systems</title>
+
+  <!-- SEO Meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="VS Marketing helps small and local businesses grow with AI-enabled inbound marketing, clear strategy, and modern systems. We build fundamentals-first growth engines that attract better leads, streamline operations, and improve performance without marketing fads." />
+  <meta name="keywords" content="small business marketing, inbound marketing agency, AI marketing for small business, business strategy consulting, tech enablement, marketing automation, CRM setup, local business growth" />
+  <meta name="robots" content="index,follow" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="VS Marketing | AI-Enabled Inbound Marketing & Small Business Growth Systems" />
+  <meta property="og:description" content="Fundamentals-first inbound marketing, strategy, and tech & AI enablement for small and local businesses. No fads, no fluff—just clear systems that grow with you." />
+  <meta property="og:image" content="./images/VSMARKETING NEW LOGO (1024 x 1024 px).png" />
+  <meta property="og:url" content="https://www.example.com/" />
+  <link rel="canonical" href="https://www.example.com/" />
+
+  <!-- SaaS-style font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
   <style>
     :root {
-      --accent: #f62a3c;
-      --accent-soft: #ffe2e5;
-      --bg: #f9fafb;
-      --text: #020617;
-      --text-muted: #6b7280;
-      --radius: 20px;
-      --shadow: 0 20px 48px rgba(15, 23, 42, 0.18);
+      --vs-accent: #f62a3c;
+      --vs-accent-soft: #ffe2e5;
+      --vs-shell-bg: #020617;
+      --vs-surface: #ffffff;
+      --vs-surface-muted: #f9fafb;
+      --vs-text-main: #020617;
+      --vs-text-muted: #6b7280;
+      --vs-border-subtle: #e5e7eb;
+      --vs-shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.16);
+      --vs-radius-xl: 22px;
+      --vs-radius-lg: 16px;
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: 'Inter', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
+      margin: 0;
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--vs-text-main);
+      background:
+        radial-gradient(circle at top left, rgba(246, 42, 60, 0.15), transparent 55%),
+        radial-gradient(circle at top right, rgba(56, 189, 248, 0.1), transparent 55%),
+        linear-gradient(to bottom, #020617, #020617 40%, #020617 100%);
+      -webkit-font-smoothing: antialiased;
     }
-    header {
-      background: #fff;
-      padding: 1.5rem 2rem;
+
+    a {
+      color: var(--vs-accent);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Shell / App-style container */
+    .page-shell {
+      max-width: 1200px;
+      margin: 1.5rem auto 2.5rem;
+      padding: 0.12rem;
+      border-radius: calc(var(--vs-radius-xl) + 4px);
+      background:
+        linear-gradient(135deg, rgba(248,250,252,0.18), rgba(15,23,42,0.7));
+      box-shadow:
+        0 0 0 1px rgba(148,163,184,0.4),
+        0 20px 60px rgba(15,23,42,0.55);
+    }
+
+    .page {
+      min-height: 100vh;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: var(--shadow);
+      flex-direction: column;
+      border-radius: var(--vs-radius-xl);
+      overflow: hidden;
+      background:
+        radial-gradient(circle at top, #ffffff 0, #f9fafb 55%, #eef2ff 100%);
+    }
+
+    .container {
+      width: 92%;
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    /* Header / Nav */
+    header {
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 20;
+      backdrop-filter: blur(20px);
+      background: linear-gradient(
+        to bottom,
+        rgba(249,250,251,0.97),
+        rgba(249,250,251,0.93)
+      );
+      border-bottom: 1px solid rgba(226,232,240,0.9);
     }
-    .logo {
+
+    .nav {
       display: flex;
       align-items: center;
-      gap: 0.75rem;
+      justify-content: space-between;
+      gap: 1.25rem;
+      padding: 0.7rem 0.2rem;
     }
-    .logo img {
-      height: 48px;
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      min-width: 0;
     }
-    nav a {
-      margin: 0 0.75rem;
-      color: var(--text-muted);
-      text-decoration: none;
-      font-weight: 500;
+
+    .nav-logo {
+      height: 34px;
+      width: auto;
+      display: block;
     }
-    nav a:hover {
-      color: var(--accent);
-    }
-    .btn {
-      padding: 0.75rem 1.5rem;
-      border-radius: 999px;
+
+    .nav-tagline {
+      font-size: 0.75rem;
       text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #6b7280;
+      max-width: 240px;
+      line-height: 1.3;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.86rem;
+      padding: 0.18rem 0.45rem;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.98);
+      box-shadow: 0 10px 26px rgba(15,23,42,0.05);
+      border: 1px solid rgba(226,232,240,0.95);
+      white-space: nowrap;
+    }
+
+    .nav-links a {
+      color: #4b5563;
+      padding: 0.22rem 0.55rem;
+      border-radius: 999px;
+      transition: background 120ms ease, color 120ms ease;
+    }
+
+    .nav-links a:hover {
+      background: #0f172a;
+      color: #f9fafb;
+      text-decoration: none;
+    }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.55rem 1.05rem;
+      border-radius: 999px;
+      border: 1px solid var(--vs-accent);
+      font-size: 0.78rem;
       font-weight: 600;
-      font-size: 0.9rem;
-      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #0b1120;
+      background: #ffffff;
+      box-shadow: 0 12px 30px rgba(248,113,113,0.28);
+      white-space: nowrap;
+    }
+
+    .nav-cta:hover {
+      background: var(--vs-accent);
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .nav-toggle {
+      display: none;
       border: none;
+      background: none;
+      font-size: 1.6rem;
+      line-height: 1;
       cursor: pointer;
-      transition: 0.2s;
+      color: #111827;
+      padding: 0.2rem;
     }
-    .btn-primary {
-      background: var(--accent);
-      color: #fff;
-      box-shadow: 0 10px 20px rgba(246, 42, 60, 0.4);
+
+    @media (max-width: 960px) {
+      .nav-links,
+      .nav-cta {
+        display: none;
+      }
+      .nav-toggle {
+        display: block;
+      }
+
+      .nav {
+        padding-inline: 0.1rem;
+      }
+
+      .nav.open {
+        flex-wrap: wrap;
+        align-items: flex-start;
+      }
+
+      .nav.open .nav-right {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 0.6rem;
+        gap: 0.5rem;
+      }
+
+      .nav.open .nav-links {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+      }
+
+      .nav.open .nav-cta {
+        display: inline-flex;
+      }
     }
-    .btn-primary:hover {
-      background: #d51f2f;
+
+    @media (max-width: 720px) {
+      .page-shell {
+        margin: 0.8rem auto 1.6rem;
+      }
+
+      .nav {
+        padding-top: 0.55rem;
+        padding-bottom: 0.55rem;
+      }
+
+      .nav-logo {
+        height: 30px;
+      }
+
+      .nav-tagline {
+        display: none;
+      }
+
+      .nav.open .nav-links {
+        font-size: 0.84rem;
+        gap: 0.2rem;
+      }
+
+      .nav.open .nav-cta {
+        width: 100%;
+        justify-content: center;
+      }
     }
+
+    /* Sections */
     main {
-      padding: 4rem 2rem;
-      max-width: 1100px;
-      margin: auto;
+      flex: 1;
     }
+
+    section {
+      padding: 3.1rem 0;
+      scroll-margin-top: 80px;
+    }
+
+    .section-header {
+      max-width: 640px;
+      margin-bottom: 2rem;
+    }
+
+    .section-title {
+      font-size: 1.85rem;
+      margin: 0 0 0.5rem;
+      color: #020617;
+    }
+
+    .section-kicker {
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #6b7280;
+      margin-bottom: 0.4rem;
+    }
+
+    .section-intro {
+      margin: 0;
+      font-size: 0.98rem;
+      color: var(--vs-text-muted);
+      line-height: 1.7;
+    }
+
+    .section-alt {
+      background: linear-gradient(to bottom, #f9fafb, #eef2ff);
+      border-top: 1px solid #e5e7eb;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    /* Hero */
     .hero {
+      padding: 3.2rem 0 2.8rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.45fr) minmax(0, 1.1fr);
+      gap: 2.4rem;
+      align-items: center;
+    }
+
+    .hero-kicker {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--vs-accent);
+      margin-bottom: 0.8rem;
+    }
+
+    .hero-title {
+      font-size: 2.4rem;
+      line-height: 1.07;
+      margin: 0 0 0.8rem;
+      color: #020617;
+    }
+
+    .hero-subtitle {
+      font-size: 0.98rem;
+      color: var(--vs-text-muted);
+      margin: 0 0 1.7rem;
+      max-width: 32rem;
+    }
+
+    .hero-cta-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 2rem;
+      gap: 0.8rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.8rem 1.35rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      cursor: pointer;
+      transition: background 140ms ease, color 140ms ease, box-shadow 140ms ease, transform 120ms ease;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--vs-accent);
+      color: #fff;
+      box-shadow: 0 14px 32px rgba(246, 42, 60, 0.4);
+    }
+
+    .btn-primary:hover {
+      background: #d51f2f;
+      box-shadow: 0 16px 36px rgba(246, 42, 60, 0.48);
+      transform: translateY(-1px);
+      text-decoration: none;
+    }
+
+    .btn-outline {
+      background: #ffffff;
+      color: #020617;
+      border-color: rgba(15,23,42,0.12);
+    }
+
+    .btn-outline:hover {
+      background: #0f172a;
+      color: #f9fafb;
+      text-decoration: none;
+      box-shadow: 0 12px 26px rgba(15, 23, 42, 0.22);
+    }
+
+    .hero-image {
+      border-radius: var(--vs-radius-xl);
+      box-shadow: var(--vs-shadow-soft);
+      background: radial-gradient(circle at top, #ffffff 0, #eef2ff 65%, #e5e7eb 100%);
+      padding: 1rem;
+    }
+
+    .hero-image-inner {
+      border-radius: var(--vs-radius-lg);
+      background: #ffffff;
+      padding: 1.3rem 1.4rem 1.4rem;
+      border: 1px solid rgba(226,232,240,0.95);
+    }
+
+    .hero-image-tag {
+      font-size: 0.78rem;
+      color: var(--vs-text-muted);
+      margin-bottom: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
+
+    .hero-metric {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero-metric-number {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #020617;
+    }
+
+    .hero-metric-label {
+      font-size: 0.9rem;
+      color: var(--vs-text-muted);
+    }
+
+    .hero-mini {
+      font-size: 0.85rem;
+      color: var(--vs-text-muted);
+      margin-top: 0.3rem;
+    }
+
+    /* Featured images */
+    .featured-image {
+      margin-top: 1.8rem;
+      text-align: center;
+    }
+
+    .featured-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: var(--vs-radius-lg);
+      box-shadow: var(--vs-shadow-soft);
+      display: block;
+      margin: 0 auto;
+    }
+
+    .featured-image figcaption {
+      font-size: 0.82rem;
+      color: var(--vs-text-muted);
+      margin-top: 0.45rem;
+    }
+
+    .featured-split {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+      gap: 1.8rem;
+      align-items: center;
+      margin-top: 2.1rem;
+    }
+
+    /* Problem / Solution */
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
+      gap: 2.2rem;
+      align-items: flex-start;
+    }
+
+    .list-title {
+      font-weight: 600;
+      margin-bottom: 0.6rem;
+      color: #020617;
+    }
+
+    .bullet-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .bullet-list li {
+      position: relative;
+      padding-left: 1.2rem;
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+      color: var(--vs-text-muted);
+    }
+
+    .bullet-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--vs-accent);
+      font-size: 1.08rem;
+      line-height: 1;
+    }
+
+    /* Cards / Grids */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.5rem;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: var(--vs-radius-lg);
+      padding: 1.4rem 1.5rem;
+      border: 1px solid var(--vs-border-subtle);
+      box-shadow: 0 10px 30px rgba(15,23,42,0.06);
+    }
+
+    .card h3 {
+      margin: 0 0 0.45rem;
+      font-size: 1.08rem;
+      color: #020617;
+    }
+
+    .card p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: var(--vs-text-muted);
+      line-height: 1.7;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.12rem 0.65rem;
+      border-radius: 999px;
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      background: var(--vs-accent-soft);
+      color: var(--vs-accent);
+      margin-bottom: 0.45rem;
+    }
+
+    /* Stats */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.4rem;
+    }
+
+    .stat {
+      border-radius: var(--vs-radius-lg);
+      padding: 1.1rem 1.3rem;
+      background: #ffffff;
+      border: 1px dashed rgba(148,163,184,0.75);
+      box-shadow: 0 10px 30px rgba(15,23,42,0.06);
+      font-size: 0.94rem;
+      color: var(--vs-text-muted);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.15rem;
+      color: #020617;
+      margin-bottom: 0.25rem;
+    }
+
+    /* Case Studies */
+    .case-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 1.3rem;
+    }
+
+    .case-meta {
+      font-size: 0.84rem;
+      color: var(--vs-text-muted);
+      margin-bottom: 0.55rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .case-list {
+      list-style: disc;
+      margin: 0.6rem 0 0.6rem 1.2rem;
+      padding: 0;
+      color: var(--vs-text-muted);
+      font-size: 0.95rem;
+    }
+
+    .case-quote {
+      font-size: 0.9rem;
+      color: var(--vs-text-muted);
+      margin-top: 0.6rem;
+      border-left: 3px solid var(--vs-accent-soft);
+      padding-left: 0.75rem;
+    }
+
+    /* Pricing */
+    .pricing-note {
+      font-size: 0.95rem;
+      color: var(--vs-text-muted);
+      margin-bottom: 1.4rem;
+    }
+
+    /* CTA */
+    .cta {
+      text-align: center;
+    }
+
+    .cta p {
+      max-width: 480px;
+      margin: 0.7rem auto 1.7rem;
+      font-size: 0.97rem;
+      color: var(--vs-text-muted);
+      line-height: 1.7;
+    }
+
+    /* Contact / Footer */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.4rem;
+    }
+
+    .contact-item-title {
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+      font-size: 0.95rem;
+    }
+
+    .footer {
+      border-top: 1px solid #e5e7eb;
+      padding: 1.4rem 0;
+      font-size: 0.84rem;
+      color: #6b7280;
+      background: #f9fafb;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.8rem;
+      flex-wrap: wrap;
       align-items: center;
     }
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
+
+    .footer span {
+      color: #020617;
+      font-weight: 500;
     }
-    .hero p {
-      max-width: 36rem;
-      color: var(--text-muted);
-      margin-bottom: 2rem;
+
+    /* Form */
+    .lead-form {
+      max-width: 520px;
+      margin: 2rem auto 0;
+      text-align: left;
     }
-    .hero img {
-      max-width: 500px;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
+
+    .form-row {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.8rem;
+      margin-bottom: 0.8rem;
     }
-    .section {
-      margin-top: 6rem;
+
+    .form-field {
+      margin-bottom: 0.8rem;
     }
-    .section h2 {
-      font-size: 2.25rem;
-      margin-bottom: 1rem;
+
+    .form-field label {
+      display: block;
+      font-size: 0.84rem;
+      font-weight: 500;
+      margin-bottom: 0.3rem;
     }
-    .section p {
-      color: var(--text-muted);
-      max-width: 700px;
-      margin-bottom: 2rem;
-    }
-    form {
-      margin-top: 2rem;
-    }
-    input, textarea {
+
+    .form-field input,
+    .form-field textarea {
       width: 100%;
-      padding: 0.6rem;
-      margin-bottom: 1rem;
-      border-radius: 10px;
-      border: 1px solid #ccc;
-      font-family: inherit;
+      padding: 0.6rem 0.7rem;
+      border-radius: 0.55rem;
+      border: 1px solid #d1d5db;
+      font: inherit;
+      color: var(--vs-text-main);
+      background: #ffffff;
     }
-    footer {
-      background: #fff;
-      padding: 2rem;
-      text-align: center;
-      color: var(--text-muted);
-      border-top: 1px solid #e5e7eb;
+
+    .form-field input:focus,
+    .form-field textarea:focus {
+      outline: none;
+      border-color: var(--vs-accent);
+      box-shadow: 0 0 0 1px rgba(246,42,60,0.35);
+    }
+
+    .form-footnote {
+      font-size: 0.8rem;
+      color: #888;
+      margin-top: 0.4rem;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 960px) {
+      .hero-grid {
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
+      }
+
+      .grid-3,
+      .stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .contact-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .featured-split {
+        grid-template-columns: minmax(0,1fr);
+      }
+    }
+
+    @media (max-width: 740px) {
+      section {
+        padding: 2.5rem 0;
+      }
+
+      .hero {
+        padding-top: 2.3rem;
+      }
+
+      .hero-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero-title {
+        font-size: 2.1rem;
+      }
+
+      .hero-subtitle {
+        font-size: 0.95rem;
+      }
+
+      .two-col,
+      .grid-3,
+      .grid-2,
+      .stats,
+      .contact-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .btn {
+        padding-inline: 1.1rem;
+        font-size: 0.84rem;
+      }
+
+      .hero-cta-row {
+        gap: 0.6rem;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <img src="./images/vs-marketing-logo.png" alt="VS Marketing" />
-      <span>VS Marketing</span>
-    </div>
-    <nav>
-      <a href="#how">How We Help</a>
-      <a href="#ai">AI Enablement</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <a href="#contact" class="btn btn-primary">Get Started</a>
-  </header>
-  <main>
-    <section class="hero">
-      <div>
-        <h1>Growth Built on Fundamentals, Not Fads</h1>
-        <p>We help small businesses grow through clear strategy, AI-enhanced marketing, and connected systems—no hype required.</p>
-        <a href="#contact" class="btn btn-primary">Schedule a Consultation</a>
+<div class="page-shell">
+  <div class="page">
+
+    <!-- Header / Nav -->
+    <header>
+      <div class="container">
+        <div class="nav" id="nav">
+          <div class="nav-left">
+            <img src="./images/VSMARKETING NEW LOGO (1024 x 1024 px).png" alt="VS Marketing logo" class="nav-logo" />
+            <div class="nav-tagline">AI-Enabled Growth Built on Fundamentals, Not Fads</div>
+          </div>
+          <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.getElementById('nav').classList.toggle('open')">
+            ☰
+          </button>
+          <div class="nav-right">
+            <div class="nav-links">
+              <a href="#problem">Problems</a>
+              <a href="#pillars">How We Help</a>
+              <a href="#ai">AI Enablement</a>
+              <a href="#why">Why Us</a>
+              <a href="#results">Results</a>
+              <a href="#pricing">Pricing</a>
+              <a href="#contact">Contact</a>
+            </div>
+            <a href="#contact" class="nav-cta">Schedule Consultation</a>
+          </div>
+        </div>
       </div>
-      <img src="./images/hero-consulting-session.jpg" alt="Consulting session" />
-    </section>
+    </header>
 
-    <section id="how" class="section">
-      <h2>How We Help</h2>
-      <p>Three core pillars guide our work: Inbound Marketing, Business Strategy, and AI Enablement. We start with fundamentals, then amplify with smart tech.</p>
-    </section>
+    <main>
 
-    <section id="ai" class="section">
-      <h2>AI Enablement</h2>
-      <p>We implement AI where it adds true leverage—automating workflows, accelerating content, and surfacing insights to save time and boost performance.</p>
-    </section>
+      <!-- Hero -->
+      <section class="hero" id="top">
+        <div class="container">
+          <div class="hero-grid">
+            <div>
+              <div class="hero-kicker">AI-Enabled for Small &amp; Local Businesses</div>
+              <h1 class="hero-title">Growth Built on Fundamentals, Not Fads.</h1>
+              <p class="hero-subtitle">
+                VS Marketing combines inbound marketing, smart operations, and AI-powered tools to help small and local businesses grow with clarity—not complexity or hype.
+              </p>
+              <div class="hero-cta-row">
+                <a href="#contact" class="btn btn-primary">Schedule a Consultation</a>
+                <a href="#results" class="btn btn-outline">See Client Results</a>
+              </div>
+            </div>
+            <div class="hero-image">
+              <div class="hero-image-inner">
+                <div class="hero-image-tag">What AI-Enabled Growth Looks Like</div>
 
-    <section id="contact" class="section">
-      <h2>Let’s Talk</h2>
-      <p>Tell us about your business and growth goals. We’ll get back within 1 business day with next steps.</p>
-      <form>
-        <input type="text" placeholder="Your name" name="name" required>
-        <input type="email" placeholder="Your email" name="email" required>
-        <input type="text" placeholder="Business name" name="business">
-        <input type="url" placeholder="Website (optional)" name="website">
-        <textarea name="message" rows="4" placeholder="How can we help you?"></textarea>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
-    </section>
-  </main>
-  <footer>
-    &copy; <span id="year"></span> VS Marketing. All rights reserved.
-  </footer>
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+                <div class="hero-metric">
+                  <div class="hero-metric-number">3</div>
+                  <div class="hero-metric-label">
+                    Core pillars working together: Inbound Marketing, Strategy &amp; Operations, Tech &amp; AI Enablement.
+                  </div>
+                </div>
+
+                <div class="hero-metric">
+                  <div class="hero-metric-number">10+ hrs</div>
+                  <div class="hero-metric-label">
+                    Owner time saved per week using AI-assisted workflows, automation, and better systems.
+                  </div>
+                </div>
+
+                <p class="hero-mini">
+                  We use AI where it’s actually useful—content, workflows, and decision-making—layered on top of solid fundamentals so you get leverage, not chaos.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero featured image -->
+          <figure class="featured-image" aria-hidden="true">
+            <img src="./images/hero-consulting-session.jpg" alt="Consultants and small business owner reviewing an AI-enabled marketing dashboard" />
+            <figcaption>An AI-enabled growth plan built on fundamentals, not fads.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Problem / Solution -->
+      <section id="problem" class="section-alt">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-kicker">Problem &amp; Solution</div>
+            <h2 class="section-title">Too Many Tactics, Too Many Tools, Not Enough Results.</h2>
+            <p class="section-intro">
+              From marketing trends to AI tools, it’s easy to feel like you’re always behind. Most small businesses don’t need more software—they need a simple, connected system that actually gets used.
+            </p>
+          </div>
+
+          <div class="featured-split">
+            <div>
+              <div class="list-title">Common challenges we see:</div>
+              <ul class="bullet-list">
+                <li>Marketing feels scattered and unpredictable from month to month.</li>
+                <li>Systems are outdated, manual, and create extra work and mistakes.</li>
+                <li>You’ve tried AI tools, but they feel random and hard to integrate.</li>
+                <li>Agencies push shiny campaigns but rarely explain what’s working.</li>
+                <li>You’re paying for tools and subscriptions your team barely uses.</li>
+              </ul>
+            </div>
+            <figure class="featured-image">
+              <img src="./images/overwhelmed-business-owner.jpg" alt="Overwhelmed small business owner surrounded by laptops and reports" />
+              <figcaption>Most owners are overloaded with disconnected tools and tactics.</figcaption>
+            </figure>
+          </div>
+
+          <div style="height:2rem;"></div>
+
+          <div class="two-col">
+            <div>
+              <div class="list-title">How we solve them with fundamentals + AI:</div>
+              <ul class="bullet-list">
+                <li>Clarify your positioning, offers, and messaging so marketing becomes focused.</li>
+                <li>Build an inbound system that consistently brings in the right leads.</li>
+                <li>Use AI to speed up content, routine tasks, and follow-up—not replace strategy.</li>
+                <li>Implement simple dashboards so you can see what’s working at a glance.</li>
+                <li>Modernize and connect your tools so your business runs smoother every month.</li>
+              </ul>
+            </div>
+            <figure class="featured-image">
+              <img src="./images/organized-dashboard.jpg" alt="Clean dashboard showing simplified small business metrics" />
+              <figcaption>Clear systems and dashboards make decisions easier.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- Three Pillars -->
+      <section id="pillars">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-kicker">How We Help</div>
+            <h2 class="section-title">Three Pillars of AI-Enabled Growth</h2>
+            <p class="section-intro">
+              You don’t have to adopt “all the AI” at once. We start with the fundamentals, then layer in AI where it gives you leverage across marketing, operations, and performance.
+            </p>
+          </div>
+
+          <div class="grid-3">
+            <article class="card">
+              <div class="pill">Pillar 1</div>
+              <h3>Inbound Marketing (With AI Assist)</h3>
+              <p>
+                Websites, SEO, content, ads, email, and CRM—planned as a single system. We use AI to speed up research, content drafts, and testing, while humans handle strategy, quality, and voice.
+              </p>
+            </article>
+
+            <article class="card">
+              <div class="pill">Pillar 2</div>
+              <h3>Business Strategy &amp; Performance</h3>
+              <p>
+                Founder-level strategy to clarify goals, offers, and numbers. AI is used to analyze trends, summarize performance, and surface opportunities so you can make better decisions, faster.
+              </p>
+            </article>
+
+            <article class="card">
+              <div class="pill">Pillar 3</div>
+              <h3>Tech &amp; AI Enablement</h3>
+              <p>
+                We design and implement a modern stack—CRM, billing, scheduling, and AI agents—to automate repetitive work, streamline workflows, and keep your team focused on high-value tasks.
+              </p>
+            </article>
+          </div>
+
+          <figure class="featured-image">
+            <img src="./images/team-strategy-session.jpg" alt="VS Marketing team mapping out strategy with a small business owner" />
+            <figcaption>Strategy, systems, and AI working together as one growth engine.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- AI Enablement Section -->
+      <section id="ai" class="section-alt">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-kicker">AI Enablement</div>
+            <h2 class="section-title">AI That Supports Your Whole Business, Not Just Marketing.</h2>
+            <p class="section-intro">
+              We treat AI like a set of power tools—not a magic button. Our job is to help you use AI safely and effectively across marketing, operations, and business performance.
+            </p>
+          </div>
+
+          <div class="grid-3">
+            <div class="card">
+              <h3>AI for Marketing</h3>
+              <p>
+                Use AI to draft content, generate ad variations, repurpose blogs into social posts, and personalize email—without losing your brand’s voice or strategy.
+              </p>
+            </div>
+            <div class="card">
+              <h3>AI for Operations &amp; Workflow</h3>
+              <p>
+                Automate repetitive tasks like data entry, follow-up reminders, FAQs, simple support responses, and internal updates so your team can focus on real work.
+              </p>
+            </div>
+            <div class="card">
+              <h3>AI for Business Performance</h3>
+              <p>
+                Turn messy data into usable insight. We use AI to summarize reports, spot patterns, and highlight key metrics so you always know what’s working and what isn’t.
+              </p>
+            </div>
+          </div>
+
+          <figure class="featured-image">
+            <img src="./images/ai-workflow-diagram.jpg" alt="Diagram of AI-enabled workflows across marketing, operations, and reporting" />
+            <figcaption>AI woven into the workflows you already rely on.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Why Choose Us -->
+      <section id="why">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-kicker">Why VS Marketing</div>
+            <h2 class="section-title">AI Without the Hype, Fundamentals Without the Guesswork.</h2>
+            <p class="section-intro">
+              We’re not here to sell you a tool or a trend. We’re here to build a durable growth system and then use AI to make it faster, smarter, and easier to run.
+            </p>
+          </div>
+
+          <div class="grid-3">
+            <div class="card">
+              <h3>Founder-Led Expertise</h3>
+              <p>Our strategies are shaped by people who have actually built, scaled, and sold companies—not just studied them.</p>
+            </div>
+            <div class="card">
+              <h3>No-Fads, No-Fluff</h3>
+              <p>We apply AI where it clearly helps. No buzzword chasing, no “AI for AI’s sake.” Fundamentals first, tools second.</p>
+            </div>
+            <div class="card">
+              <h3>Hands-On Implementation</h3>
+              <p>We don’t just recommend tools—we help configure, integrate, and document them so your team actually uses them.</p>
+            </div>
+            <div class="card">
+              <h3>Built for Small Business</h3>
+              <p>We favor lightweight, affordable solutions and automations that your team can understand and maintain.</p>
+            </div>
+            <div class="card">
+              <h3>Transparent &amp; Practical</h3>
+              <p>No jargon. No black boxes. Just clear recommendations tied directly to leads, efficiency, or profitability.</p>
+            </div>
+          </div>
+
+          <figure class="featured-image">
+            <img src="./images/founder-working-with-client.jpg" alt="Founder-level strategist working directly with small business owner" />
+            <figcaption>Direct access to people who’ve built and run real businesses.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Results / Stats -->
+      <section id="results" class="section-alt">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-kicker">Results</div>
+            <h2 class="section-title">Real Results, Real Impact</h2>
+            <p class="section-intro">
+              We measure success in terms that matter to you—visibility, leads, time saved, and profit. AI is one ingredient, not the whole recipe.
+            </p>
+          </div>
+
+          <div class="stats">
+            <div class="stat">
+              <strong>200%+ Search Visibility</strong>
+              Local service businesses see major gains after we fix basic SEO, content, and on-page structure—then use AI to scale content efficiently.
+            </div>
+            <div class="stat">
+              <strong>60–90 Days to Better Leads</strong>
+              Once fundamentals and baseline campaigns are in place, most clients see more consistent inbound opportunities within 2–3 months.
+            </div>
+            <div class="stat">
+              <strong>Hours Back Every Week</strong>
+              Cleaner systems, automations, and AI-assisted workflows give owners and teams meaningful time back for higher-value work.
+            </div>
+          </div>
+
+          <figure class="featured-image">
+            <img src="./images/results-dashboard.jpg" alt="Analytics dashboard showing growth in search and leads" />
+            <figcaption>We tie every initiative back to measurable impact.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Case Studies -->
+      <section>
+        <div class="container">
+          <div class="section-header">
+            <div class="section-kicker">Client Stories</div>
+            <h2 class="section-title">Examples of AI-Enabled Fundamentals in Action</h2>
+            <p class="section-intro">
+              Every business is different, but the pattern is the same: clarify, simplify, connect the pieces, then use AI to amplify what already works.
+            </p>
+          </div>
+
+          <div class="case-grid">
+            <article class="card">
+              <div class="case-meta">Local Service Business &mdash; Inbound + AI Follow-Up</div>
+              <h3>Doubling Qualified Leads in 6 Months</h3>
+              <p>
+                A local service provider relied on word-of-mouth and an outdated site. They had no tracking, no follow-up, and lots of missed opportunities.
+              </p>
+              <ul class="case-list">
+                <li>Redesigned the website with clear offers and calls to action.</li>
+                <li>Improved local SEO and built content around core services.</li>
+                <li>Implemented a CRM with AI-assisted email templates and automated lead follow-ups.</li>
+              </ul>
+              <p class="case-quote">
+                “VS Marketing gave us structure and consistency. For the first time, our marketing and follow-up feel under control.”
+              </p>
+            </article>
+
+            <article class="card">
+              <div class="case-meta">Retail / Brick-and-Mortar &mdash; Systems &amp; AI Summaries</div>
+              <h3>Streamlining Systems and Improving Cash Flow</h3>
+              <p>
+                A busy retail business juggled manual billing, scattered scheduling, and multiple disconnected tools. Payments were slow and reporting was messy.
+              </p>
+              <ul class="case-list">
+                <li>Implemented an integrated POS and invoicing system with recurring billing where appropriate.</li>
+                <li>Simplified scheduling and standardized how staff used the tools.</li>
+                <li>Created AI-generated weekly performance summaries from POS and booking data.</li>
+              </ul>
+              <p class="case-quote">
+                “Our systems finally feel like they’re working for us instead of against us, and we can see what’s happening without digging through reports.”
+              </p>
+            </article>
+          </div>
+
+          <figure class="featured-image">
+            <img src="./images/client-success-collage.jpg" alt="Collage of different small business clients" />
+            <figcaption>Different businesses, same fundamentals-first approach.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Pricing Summary -->
+      <section id="pricing" class="section-alt">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-kicker">Pricing</div>
+            <h2 class="section-title">Simple, Transparent Options</h2>
+            <p class="section-intro">
+              No hidden fees. No bloated retainers. Just straightforward options that blend fundamentals, systems, and AI enablement at a pace that fits you.
+            </p>
+          </div>
+
+          <p class="pricing-note">
+            Exact pricing depends on your size, systems, and goals. Here’s how we typically structure engagements:
+          </p>
+
+          <div class="grid-3">
+            <div class="card">
+              <div class="pill">Inbound Marketing</div>
+              <h3>Starter Presence</h3>
+              <p>For businesses building a serious online presence for the first time. Website clean-up or simple new site, basic SEO, analytics, and light AI-assisted content support.</p>
+            </div>
+            <div class="card">
+              <div class="pill">Inbound Marketing</div>
+              <h3>Growth Inbound</h3>
+              <p>Ongoing SEO, content, email, and reporting with AI-assisted research and drafting—always guided and edited by humans.</p>
+            </div>
+            <div class="card">
+              <div class="pill">Inbound + AI</div>
+              <h3>Performance Inbound</h3>
+              <p>Full inbound program including SEO, content, ads, advanced email, and testing frameworks that use AI to rapidly iterate and learn.</p>
+            </div>
+          </div>
+
+          <div style="height:1.6rem;"></div>
+
+          <div class="grid-3">
+            <div class="card">
+              <div class="pill">Strategy</div>
+              <h3>Business Diagnostic</h3>
+              <p>One-time deep dive into your marketing, operations, and numbers. Includes recommendations on where AI can safely and effectively support your team.</p>
+            </div>
+            <div class="card">
+              <div class="pill">Strategy</div>
+              <h3>Monthly Advisory</h3>
+              <p>Ongoing strategy calls, planning, and accountability, plus guidance on when and how to bring AI into your process over time.</p>
+            </div>
+            <div class="card">
+              <div class="pill">Strategy + AI</div>
+              <h3>Growth Partner</h3>
+              <p>A higher-engagement partnership where we stay close to your leadership, help drive major changes, and continually refine how AI supports your business.</p>
+            </div>
+          </div>
+
+          <div style="height:1.6rem;"></div>
+
+          <div class="grid-3">
+            <div class="card">
+              <div class="pill">Tech Enablement</div>
+              <h3>Core Stack Setup</h3>
+              <p>Implementation of essential tools for invoicing, scheduling, and payments—plus basic documentation and training.</p>
+            </div>
+            <div class="card">
+              <div class="pill">AI Workflows</div>
+              <h3>CRM &amp; Automation</h3>
+              <p>CRM selection and implementation, AI-assisted workflows, and automations for lead capture, follow-up, and simple customer touchpoints.</p>
+            </div>
+            <div class="card">
+              <div class="pill">AI Modernization</div>
+              <h3>Full Tech &amp; AI Enablement</h3>
+              <p>Broader overhaul of your tools, data flows, and AI usage so your marketing, operations, and reporting all pull in the same direction.</p>
+            </div>
+          </div>
+
+          <figure class="featured-image">
+            <img src="./images/pricing-discussion.jpg" alt="Consultant reviewing pricing options with a small business owner" />
+            <figcaption>We design engagement levels that match where you are today.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Big CTA -->
+      <section>
+        <div class="container cta">
+          <div class="section-kicker">Next Step</div>
+          <h2 class="section-title">Ready to Make AI Work for Your Business, Not the Other Way Around?</h2>
+          <p>
+            You don’t need another tool. You need a simple, AI-enabled growth system built on fundamentals that last. Let’s talk about where you are now, where you want to go, and the smartest way to use AI to help you get there.
+          </p>
+          <a href="#contact" class="btn btn-primary">Schedule Your Consultation</a>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="section-alt">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-kicker">Contact</div>
+            <h2 class="section-title">Let’s Talk About Your Growth</h2>
+            <p class="section-intro">
+              Share a bit about your business, your current challenges, and how you’re thinking about AI. We’ll follow up with next steps and a recommended starting point.
+            </p>
+          </div>
+
+          <div class="contact-grid">
+            <div>
+              <div class="contact-item-title">Call</div>
+              <p><a href="tel:12057375133">205-737-5133</a></p>
+            </div>
+            <div>
+              <div class="contact-item-title">Email</div>
+              <p><a href="mailto:info@vs.marketing">info@vs.marketing</a></p>
+            </div>
+            <div>
+              <div class="contact-item-title">Service Area</div>
+              <p>Supporting small and local businesses wherever fundamentals and smart AI matter more than fads.</p>
+            </div>
+          </div>
+
+          <form class="lead-form">
+            <div class="form-row">
+              <div class="form-field">
+                <label for="name">Name</label>
+                <input id="name" type="text" name="name" placeholder="Your name" />
+              </div>
+              <div class="form-field">
+                <label for="email">Email</label>
+                <input id="email" type="email" name="email" placeholder="you@example.com" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="business">Business Name</label>
+                <input id="business" type="text" name="business" placeholder="Your business" />
+              </div>
+              <div class="form-field">
+                <label for="website">Website (optional)</label>
+                <input id="website" type="url" name="website" placeholder="https://…" />
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="message">What would you like to improve?</label>
+              <textarea id="message" name="message" rows="4" placeholder="Share where you are today, how you're currently using AI (if at all), and what you'd like help with."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit Inquiry</button>
+            <div class="form-footnote">We’ll review your message and typically respond within one business day. No spam, ever.</div>
+          </form>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-inner">
+          <div>© <span id="year"></span> VS Marketing. All rights reserved.</div>
+          <div>AI-Enabled Growth Built on Fundamentals, Not Fads.</div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+</div>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
