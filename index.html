@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AI-enabled inbound marketing and business growth for small businesses by VS Marketing." />
+  <title>VS Marketing | AI-Enabled Growth</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --accent: #f62a3c;
+      --accent-soft: #ffe2e5;
+      --bg: #f9fafb;
+      --text: #020617;
+      --text-muted: #6b7280;
+      --radius: 20px;
+      --shadow: 0 20px 48px rgba(15, 23, 42, 0.18);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    header {
+      background: #fff;
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .logo img {
+      height: 48px;
+    }
+    nav a {
+      margin: 0 0.75rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    nav a:hover {
+      color: var(--accent);
+    }
+    .btn {
+      padding: 0.75rem 1.5rem;
+      border-radius: 999px;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 0.9rem;
+      letter-spacing: 0.08em;
+      border: none;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      box-shadow: 0 10px 20px rgba(246, 42, 60, 0.4);
+    }
+    .btn-primary:hover {
+      background: #d51f2f;
+    }
+    main {
+      padding: 4rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      max-width: 36rem;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+    }
+    .hero img {
+      max-width: 500px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .section {
+      margin-top: 6rem;
+    }
+    .section h2 {
+      font-size: 2.25rem;
+      margin-bottom: 1rem;
+    }
+    .section p {
+      color: var(--text-muted);
+      max-width: 700px;
+      margin-bottom: 2rem;
+    }
+    form {
+      margin-top: 2rem;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.6rem;
+      margin-bottom: 1rem;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-family: inherit;
+    }
+    footer {
+      background: #fff;
+      padding: 2rem;
+      text-align: center;
+      color: var(--text-muted);
+      border-top: 1px solid #e5e7eb;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="./images/vs-marketing-logo.png" alt="VS Marketing" />
+      <span>VS Marketing</span>
+    </div>
+    <nav>
+      <a href="#how">How We Help</a>
+      <a href="#ai">AI Enablement</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#contact" class="btn btn-primary">Get Started</a>
+  </header>
+  <main>
+    <section class="hero">
+      <div>
+        <h1>Growth Built on Fundamentals, Not Fads</h1>
+        <p>We help small businesses grow through clear strategy, AI-enhanced marketing, and connected systems—no hype required.</p>
+        <a href="#contact" class="btn btn-primary">Schedule a Consultation</a>
+      </div>
+      <img src="./images/hero-consulting-session.jpg" alt="Consulting session" />
+    </section>
+
+    <section id="how" class="section">
+      <h2>How We Help</h2>
+      <p>Three core pillars guide our work: Inbound Marketing, Business Strategy, and AI Enablement. We start with fundamentals, then amplify with smart tech.</p>
+    </section>
+
+    <section id="ai" class="section">
+      <h2>AI Enablement</h2>
+      <p>We implement AI where it adds true leverage—automating workflows, accelerating content, and surfacing insights to save time and boost performance.</p>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Let’s Talk</h2>
+      <p>Tell us about your business and growth goals. We’ll get back within 1 business day with next steps.</p>
+      <form>
+        <input type="text" placeholder="Your name" name="name" required>
+        <input type="email" placeholder="Your email" name="email" required>
+        <input type="text" placeholder="Business name" name="business">
+        <input type="url" placeholder="Website (optional)" name="website">
+        <textarea name="message" rows="4" placeholder="How can we help you?"></textarea>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    &copy; <span id="year"></span> VS Marketing. All rights reserved.
+  </footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
